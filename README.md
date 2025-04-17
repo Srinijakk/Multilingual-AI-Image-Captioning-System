@@ -1,4 +1,4 @@
-# Multilingual-AI-Image-Captioning-System# 🌍 Multilingual AI Image Captioning System
+🌍 Multilingual AI Image Captioning System
 
 An advanced deep learning project that automatically generates **human-like captions** for images and **translates** them into multiple languages. This system combines **Computer Vision** and **Natural Language Processing (NLP)** using **CLIP** and **mBART50** models, making visual content accessible to a global audience.
 
