@@ -42,4 +42,16 @@ This project is a Flask-based web application that generates captions for upload
 
 ```bash
 git clone https://github.com/your-username/multilingual-caption-generator.git
+'''
+
 cd multilingual-caption-generator
+├── app.py
+├── requirements.txt
+├── static/
+│   └── styles.css
+├── templates/
+│   ├── index.html
+│   └── caption.html
+├── uploads/
+│   └── [uploaded_images]
+└── README.md
