@@ -1,68 +1,45 @@
-🌍 Multilingual AI Image Captioning System
+# 🖼️ Multilingual Image Caption Generator with Text-to-Speech 🎤
 
-An advanced deep learning project that automatically generates **human-like captions** for images and **translates** them into multiple languages. This system combines **Computer Vision** and **Natural Language Processing (NLP)** using **CLIP** and **mBART50** models, making visual content accessible to a global audience.
-
----
-
-## 🚀 Key Features
-
-- 🖼️ **Image Captioning**  
-  Generates high-quality captions using a **CLIP-based encoder** and Transformer-based decoder.
-
-- 🌐 **Multilingual Translation**  
-  Translates captions into **multiple languages** like French, German, Spanish, and Hindi using **mBART50**.
-
-- 📦 **End-to-End Pipeline**  
-  Input an image → Generate English caption → Translate → Output in selected language.
-
-- 💻 **Interactive Web Interface**  
-  Upload images and select target language through a **Flask-based web app**.
+This project is a Flask-based web application that generates captions for uploaded images in multiple languages, with **text-to-speech** functionality and a **modern UI**. It uses a Vision Encoder-Decoder model for captioning and MarianMT models for translation.
 
 ---
 
-## 📊 Model Architecture
+## ✨ Features
 
-- **Encoder**: [OpenAI CLIP](https://github.com/openai/CLIP) (Pre-trained Vision-Language model)
-- **Decoder**: Transformer-based language generator
-- **Translation**: HuggingFace [mBART50](https://huggingface.co/facebook/mbart-large-50-many-to-many-mmt)
-
----
-
-## 🛠️ Technologies Used
-
-| Component          | Tech Stack                      |
-|--------------------|---------------------------------|
-| Language           | Python                          |
-| Deep Learning      | PyTorch, HuggingFace Transformers |
-| Computer Vision    | CLIP (Contrastive Language–Image Pre-training) |
-| NLP Translation    | mBART50                         |
-| Deployment         | Flask, HTML/CSS (Web UI)        |
-| Image Handling     | OpenCV, PIL                     |
+- Upload any image and get a descriptive caption
+- Translate the caption into **10 international languages**
+- Listen to the translated caption via **Text-to-Speech (TTS)**
+- Clean, modern, responsive UI built with HTML, CSS, and Bootstrap
 
 ---
 
-## 📁 Dataset
+## 🌐 Supported Languages
 
-- **Image-Caption Training**: [MS COCO](https://cocodataset.org/#home)  
-- **Translation Dataset**: mBART50 pretrained multilingual dataset
+- English 🇺🇸 *(Default)*
+- French 🇫🇷
+- German 🇩🇪
+- Spanish 🇪🇸
+- Japanese 🇯🇵
+- Chinese 🇨🇳
+- Korean 🇰🇷
+- Russian 🇷🇺
+- Arabic 🇸🇦
+- Portuguese 🇵🇹
+
+*(Note: Hindi is intentionally excluded.)*
 
 ---
 
-## 🧪 Setup Instructions
+## 🧠 Models Used
+
+- **Image Captioning:** [`nlpconnect/vit-gpt2-image-captioning`](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning)
+- **Translation:** [`Helsinki-NLP/opus-mt-<lang1>-<lang2>` models](https://huggingface.co/Helsinki-NLP)
+- **Text-to-Speech:** Python `gTTS` (Google Text-to-Speech)
+
+---
+
+## 🛠️ Installation
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/multilingual-image-captioning.git
-cd multilingual-image-captioning
-
-# 2. Create virtual environment and install dependencies
-python -m venv venv
-source venv/bin/activate  # For Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
-# 3. Download CLIP model and mBART50 from HuggingFace
-# (This will happen automatically if using the script)
-
-# 4. Run the Flask app
-python app.py
-''''
+git clone https://github.com/your-username/multilingual-caption-generator.git
+cd multilingual-caption-generator
